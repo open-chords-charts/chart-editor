@@ -126,7 +126,7 @@ transpose key chart =
             chart.parts |> List.map (transposePart interval)
     in
         { chart
-            | key = key
+            | key = Note.transpose interval key
             , parts = newParts
         }
 
